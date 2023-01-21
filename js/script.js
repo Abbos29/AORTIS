@@ -53,9 +53,9 @@ window.addEventListener('scroll', fixedNav)
 // SWIPER
 
 const swiperPractic = new Swiper('.practic__swiper', {
-    autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 20,
+    autoHeight: true,
     
     // If we need pagination
     pagination: {
@@ -72,7 +72,8 @@ const swiperPractic = new Swiper('.practic__swiper', {
     breakpoints: {
 
     768: {
-      slidesPerView: 2,
+        autoHeight: true,
+        slidesPerView: 2,
     },
   }
 });
@@ -80,7 +81,7 @@ const swiperPractic = new Swiper('.practic__swiper', {
 
 const swiperStory = new Swiper('.story__swiper', {
     slidesPerView: 1,
-    autoHeight: true,
+    // autoHeight: true,
     spaceBetween: 20,
 
     roundLengths: true,
@@ -112,4 +113,37 @@ const swiperStory = new Swiper('.story__swiper', {
             loopAdditionalSlides: 30,
         },
   }
+});
+
+
+const swiperGrid = new Swiper('.grid__swiper', {
+    slidesPerView: 1,
+    centeredSlides: true,
+
+    spaceBetween: 20,
+    autoHeight: true,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        
+        720: {
+            slidesPerView: 2,
+            centeredSlides: true,
+
+            spaceBetween: 50,
+            autoHeight: true,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        },
+
+    }
+    
 });
